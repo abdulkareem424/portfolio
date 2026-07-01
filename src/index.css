@@ -39,7 +39,7 @@ textarea {
 }
 
 .section-padding {
-  padding-block: 84px;
+  padding-block: 72px;
 }
 
 .eyebrow {
@@ -53,9 +53,9 @@ textarea {
 .section-title {
   margin-top: 12px;
   color: #f8fafc;
-  font-size: clamp(2rem, 5vw, 3.3rem);
+  font-size: clamp(1.75rem, 3.8vw, 2.65rem);
   font-weight: 850;
-  line-height: 1.05;
+  line-height: 1.12;
   letter-spacing: 0;
 }
 
@@ -86,6 +86,6 @@ textarea {
 
 @media (max-width: 720px) {
   .section-padding {
-    padding-block: 64px;
+    padding-block: 56px;
   }
 }

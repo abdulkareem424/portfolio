@@ -10,6 +10,9 @@ const toneClasses = {
 function ProjectPreview({ project }) {
   const tone = toneClasses[project.tone] || toneClasses.orange
   const featureLabels = project.features.slice(0, 4)
+  const imageSrc = project.image?.startsWith('/')
+    ? `${import.meta.env.BASE_URL}${project.image.slice(1)}`
+    : project.image
 
   return (
     <div className={`overflow-hidden rounded-md border border-slate-700 bg-gradient-to-br ${tone}`}>
@@ -26,14 +29,14 @@ function ProjectPreview({ project }) {
             {project.type}
           </p>
           <div className="mt-3 flex items-center gap-3">
-            {project.image && (
+            {imageSrc && (
               <img
                 alt={`${project.title} visual asset`}
                 className="h-14 w-14 rounded-md border border-white/15 bg-white object-contain p-2"
-                src={project.image}
+                src={imageSrc}
               />
             )}
-            <h3 className="text-2xl font-black text-white">{project.title}</h3>
+            <h3 className="text-xl font-black leading-tight text-white">{project.title}</h3>
           </div>
         </div>
         <div className="grid gap-2 self-end">
