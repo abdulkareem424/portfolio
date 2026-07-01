@@ -5,6 +5,7 @@ const email = 'alhallakabdulkareem@gmail.com'
 const whatsapp = '963983233965'
 const whatsappText =
   'Hello Abdulkareem, I saw your portfolio and I want to discuss a project.'
+const contactApiUrl = import.meta.env.VITE_CONTACT_API_URL || '/api/contact'
 
 const contactLinks = [
   {
@@ -42,15 +43,19 @@ function Contact() {
     const payload = Object.fromEntries(formData.entries())
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch(contactApiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       })
-      const data = await response.json()
+      const isJson = response.headers.get('content-type')?.includes('application/json')
+      const data = isJson ? await response.json() : null
 
       if (!response.ok) {
-        throw new Error(data.error || 'Unable to send your message right now.')
+        throw new Error(
+          data?.error ||
+            'The contact form is not available here yet. Please use email or WhatsApp.',
+        )
       }
 
       event.currentTarget.reset()
@@ -61,7 +66,9 @@ function Contact() {
     } catch (error) {
       setStatus({
         type: 'error',
-        message: error.message,
+        message:
+          error.message ||
+          'The contact form is not available here yet. Please use email or WhatsApp.',
       })
     } finally {
       setIsSending(false)
