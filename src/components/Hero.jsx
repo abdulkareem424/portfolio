@@ -36,7 +36,8 @@ function Hero() {
             </a>
             <a
               className="focus-ring inline-flex items-center justify-center gap-2 rounded-md border border-slate-700 px-5 py-3 font-bold text-white transition hover:border-slate-500"
-              href="./cv.pdf"
+              download="Abdulkareem-Alhallak-CV.pdf"
+              href="./abdulkareemalhallak-cv.pdf"
             >
               Download CV <FiDownload />
             </a>
