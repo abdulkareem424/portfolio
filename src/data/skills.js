@@ -1,0 +1,67 @@
+export const skills = [
+  {
+    category: 'Frontend',
+    items: [
+      'React.js',
+      'Next.js',
+      'JavaScript',
+      'HTML5',
+      'CSS3',
+      'Tailwind CSS',
+      'Responsive Design',
+      'API Integration',
+    ],
+  },
+  {
+    category: 'Mobile Development',
+    items: [
+      'Flutter',
+      'Dart',
+      'Android Development',
+      'REST API Integration',
+      'State Management',
+      'Mobile UI',
+      'APK Build & Release',
+    ],
+  },
+  {
+    category: 'Backend',
+    items: [
+      'Laravel',
+      'Node.js',
+      'Express.js',
+      'REST APIs',
+      'Authentication',
+      'Authorization',
+      'Role-Based Access',
+      'Business Logic',
+    ],
+  },
+  {
+    category: 'Database',
+    items: [
+      'MySQL',
+      'PostgreSQL',
+      'SQLite',
+      'Database Design',
+      'Migrations',
+      'Relationships',
+      'Indexes',
+      'Data Integrity',
+    ],
+  },
+  {
+    category: 'DevOps & Tools',
+    items: [
+      'Docker',
+      'Linux',
+      'Git / GitHub',
+      'Nginx',
+      'Cloudflare',
+      'DNS',
+      'Email Configuration',
+      'Postman',
+      'VS Code',
+    ],
+  },
+]
