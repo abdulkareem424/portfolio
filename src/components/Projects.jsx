@@ -12,7 +12,7 @@ function Projects() {
           clearly from business systems.
         </p>
 
-        <div className="mt-9 grid gap-5 lg:grid-cols-3">
+        <div className="mt-9 grid gap-5 lg:grid-cols-2">
           {featuredProjects.map((project) => (
             <ProjectCard key={project.title} project={project} />
           ))}
