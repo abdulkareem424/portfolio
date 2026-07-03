@@ -61,6 +61,40 @@ export const featuredProjects = [
     demo: '',
   },
   {
+    title: 'ALC Orientation Registration',
+    type: 'Event Registration & Attendance Platform',
+    description:
+      'A production-ready registration platform for an Arabic ALC orientation session, with student signup, Telegram confirmation, admin dashboards, QR tickets, and attendance scanning.',
+    problem:
+      'The institute needed a fast, mobile-friendly way to collect orientation registrations, confirm students through Telegram, control session capacity, and check attendees in at the door.',
+    solution:
+      'Built a Node.js web app with RTL landing and registration pages, protected admin/session-manager flows, PostgreSQL persistence with JSON fallback, QR ticket generation, PDF downloads, and Telegram bot integrations.',
+    tech: [
+      'Node.js',
+      'Vanilla JS',
+      'PostgreSQL',
+      'Telegram Bot API',
+      'QR Codes',
+      'jsPDF',
+      'Docker',
+    ],
+    features: [
+      'Arabic RTL landing page',
+      'Student registration',
+      'Telegram confirmation',
+      'QR attendance',
+      'Admin dashboard',
+      'Session settings',
+      'PDF ticket export',
+      'PostgreSQL fallback',
+    ],
+    status: 'Production-ready MVP',
+    tone: 'rose',
+    image: '/images/alc-logo.jpg',
+    github: 'https://github.com/abdulkareem424/alc-orientation-registration',
+    demo: '',
+  },
+  {
     title: 'Acadia E-commerce Website',
     type: 'Storefront, Admin, and API',
     description:
