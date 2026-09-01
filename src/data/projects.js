@@ -1,6 +1,7 @@
 export const featuredProjects = [
   {
     title: 'Tabeley',
+    slug: 'tabeley',
     type: 'Restaurant & Cafe Booking Platform',
     description:
       'A mobile-first reservation platform for restaurants and cafes, backed by a Laravel API and a Flutter application.',
@@ -31,10 +32,11 @@ export const featuredProjects = [
     tone: 'orange',
     image: '/images/tabeley-logo.webp',
     github: 'https://github.com/abdulkareem424/tabeley-mvp',
-    demo: '',
+    demo: '?project=tabeley',
   },
   {
     title: 'Physio Center Management System',
+    slug: 'physio-center',
     type: 'Clinic Operations System',
     description:
       'A desktop-first clinic management system with a Flutter client, Laravel API, PostgreSQL schema, appointments, queue, billing, reports, and backup flows.',
@@ -58,10 +60,11 @@ export const featuredProjects = [
     tone: 'sky',
     image: '/images/clinic-icon.png',
     github: 'https://github.com/abdulkareem424/clinic',
-    demo: '',
+    demo: '?project=physio-center',
   },
   {
     title: 'ALC Orientation Registration',
+    slug: 'alc-orientation',
     type: 'Event Registration & Attendance Platform',
     description:
       'A production-ready registration platform for an Arabic ALC orientation session, with student signup, Telegram confirmation, admin dashboards, QR tickets, and attendance scanning.',
@@ -92,10 +95,12 @@ export const featuredProjects = [
     tone: 'rose',
     image: '/images/alc-logo.jpg',
     github: 'https://github.com/abdulkareem424/alc-orientation-registration',
-    demo: '',
+    demo: '?project=alc-orientation',
+    externalDemo: 'https://alc-architecture.com/',
   },
   {
     title: 'Acadia E-commerce Website',
+    slug: 'acadia-store',
     type: 'Storefront, Admin, and API',
     description:
       'A full-stack e-commerce store with React frontend, Express API, Prisma models, product uploads, authentication, and cart flow.',
@@ -117,10 +122,11 @@ export const featuredProjects = [
     status: 'Full-stack MVP',
     tone: 'emerald',
     github: '',
-    demo: '',
+    demo: '?project=acadia-store',
   },
   {
     title: 'Alhallak Store Prices | أسعار محل الحلاق',
+    slug: 'alhallak-prices',
     type: 'Wholesale Price Management Platform',
     description:
       'A mobile-first Arabic price board for publishing wholesale product prices in USD and SYP, with exchange-rate updates and a protected management page.',
@@ -142,13 +148,15 @@ export const featuredProjects = [
     status: 'Live / Production',
     tone: 'amber',
     github: 'https://github.com/abdulkareem424/alhallak-prices-live',
-    demo: 'https://abdulkareem424.github.io/alhallak-prices-live/',
+    demo: '?project=alhallak-prices',
+    externalDemo: 'https://abdulkareem424.github.io/alhallak-prices-live/',
   },
 ]
 
 export const academicProjects = [
   {
     title: 'Image Editor Desktop App',
+    slug: 'image-editor',
     type: 'Academic Project',
     description:
       'A desktop image editor built with C# WinForms with basic and advanced image editing tools.',
@@ -167,10 +175,11 @@ export const academicProjects = [
     status: 'Academic',
     tone: 'violet',
     github: '',
-    demo: '',
+    demo: '?project=image-editor',
   },
   {
     title: 'Physio Center Node API',
+    slug: 'physio-api',
     type: 'Backend Training Project',
     description:
       'A Node.js backend prototype for a physiotherapy center using Express, Sequelize, SQL Server, JWT authentication, and role-aware APIs.',
@@ -186,10 +195,11 @@ export const academicProjects = [
     status: 'Training / Backend Prototype',
     tone: 'amber',
     github: '',
-    demo: '',
+    demo: '?project=physio-api',
   },
   {
     title: 'Simple HTTP Web Server',
+    slug: 'http-server',
     type: 'Networking Project',
     description:
       'A Python HTTP server that handles GET and POST requests, serves static files, and processes multipart uploads.',
@@ -198,10 +208,11 @@ export const academicProjects = [
     status: 'Training Project',
     tone: 'rose',
     github: '',
-    demo: '',
+    demo: '?project=http-server',
   },
   {
     title: 'Data Mining Notebook',
+    slug: 'data-mining',
     type: 'Data & ML Project',
     description:
       'A notebook applying classification, regression, and clustering techniques on real datasets.',
@@ -210,6 +221,6 @@ export const academicProjects = [
     status: 'Academic',
     tone: 'orange',
     github: '',
-    demo: '',
+    demo: '?project=data-mining',
   },
 ]
