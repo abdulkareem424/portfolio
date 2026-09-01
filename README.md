@@ -1,6 +1,6 @@
 # Abdulkareem Alhallak Portfolio
 
-Personal portfolio for Abdulkareem Alhallak, a Full-Stack and Mobile Developer building practical web applications, mobile apps, dashboards, backend APIs, and business systems.
+Personal portfolio for Abdulkareem Alhallak, a Full-Stack Developer building React interfaces, Laravel and Node.js APIs, relational database systems, and Dockerized production applications.
 
 ## Highlights
 

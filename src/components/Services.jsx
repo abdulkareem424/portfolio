@@ -7,12 +7,11 @@ function Services() {
       <div className="section-shell">
         <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
-            <p className="eyebrow">Services</p>
-            <h2 className="section-title">Services I Can Provide</h2>
+            <p className="eyebrow">Capabilities</p>
+            <h2 className="section-title">Where I contribute in a full-stack team.</h2>
             <p className="section-lead">
-              I help businesses turn ideas into working digital products, from simple
-              websites to complete systems with dashboards, APIs, databases, and
-              deployment setup.
+              I can own a feature end-to-end or work within an existing product team,
+              from data modeling and backend logic to frontend integration and release.
             </p>
           </div>
 

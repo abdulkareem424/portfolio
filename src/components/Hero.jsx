@@ -1,6 +1,6 @@
 import { FiArrowRight, FiDownload, FiMail } from 'react-icons/fi'
 
-const stack = ['React', 'Flutter', 'Laravel', 'Node.js', 'SQL', 'Docker']
+const stack = ['React / Next.js', 'Laravel / PHP', 'Node.js / Express', 'PostgreSQL / MySQL', 'REST APIs / Auth', 'Docker / Linux']
 
 function Hero() {
   return (
@@ -8,17 +8,17 @@ function Hero() {
       <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(15,23,42,0),rgba(15,23,42,0.9)),linear-gradient(180deg,rgba(249,115,22,0.08),rgba(15,23,42,0)_46%)]" />
       <div className="section-shell relative grid min-h-[calc(84svh-64px)] items-center gap-10 py-14 lg:grid-cols-[1.18fr_0.82fr]">
         <div>
-          <p className="eyebrow">Full-Stack & Mobile Developer</p>
+          <p className="eyebrow">Full-Stack Developer</p>
           <h1 className="mt-5 max-w-4xl text-4xl font-black leading-[1.04] tracking-normal text-white sm:text-5xl lg:text-6xl">
-            Hi, I&apos;m Abdulkareem Alhallak
+            I build complete web products—from database to deployment.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-            I build web, mobile, and backend systems using React, Flutter, Laravel,
-            Node.js, and SQL databases.
+            I&apos;m Abdulkareem Alhallak, a Full-Stack Developer working with React,
+            Laravel, Node.js, and relational databases.
           </p>
           <p className="mt-4 max-w-2xl text-base leading-8 text-slate-400">
-            Useful software, clear business logic, and reliable delivery for real
-            business workflows.
+            I design schemas, build secure REST APIs, connect responsive frontends,
+            and deploy maintainable business systems with Docker and Linux.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -48,8 +48,8 @@ function Hero() {
           <div className="rounded-md border border-slate-700/70 bg-slate-950/78 p-5">
             <div className="flex items-center justify-between border-b border-slate-800 pb-4">
               <div>
-                <p className="text-sm font-bold text-white">System Builder</p>
-                <p className="mt-1 text-xs text-slate-400">Web, mobile, APIs, databases</p>
+                <p className="text-sm font-bold text-white">End-to-End Product Development</p>
+                <p className="mt-1 text-xs text-slate-400">Frontend · Backend · Database · Deployment</p>
               </div>
               <span className="rounded-md bg-orange-500/12 px-3 py-1 text-xs font-bold text-orange-300">
                 Available
@@ -66,8 +66,8 @@ function Hero() {
 
             <div className="mt-6 rounded-md border border-orange-500/25 bg-orange-500/10 p-4">
               <p className="text-sm font-semibold leading-7 text-orange-100">
-                Practical systems for reservations, clinics, dashboards, APIs, and
-                deployment-ready business tools.
+                API-first systems with authentication, role-based access, reliable
+                data models, real-time features, and production deployment.
               </p>
             </div>
           </div>

@@ -1,7 +1,14 @@
 import { useState } from 'react'
 import { FiMenu, FiX } from 'react-icons/fi'
 
-const navItems = ['Home', 'About', 'Skills', 'Projects', 'Services', 'Contact']
+const navItems = [
+  { label: 'Home', id: 'home' },
+  { label: 'About', id: 'about' },
+  { label: 'Skills', id: 'skills' },
+  { label: 'Projects', id: 'projects' },
+  { label: 'Capabilities', id: 'services' },
+  { label: 'Contact', id: 'contact' },
+]
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -19,10 +26,10 @@ function Navbar() {
           {navItems.map((item) => (
             <a
               className="focus-ring rounded text-sm font-semibold text-slate-300 transition hover:text-white"
-              href={`#${item.toLowerCase()}`}
-              key={item}
+              href={`#${item.id}`}
+              key={item.id}
             >
-              {item}
+              {item.label}
             </a>
           ))}
         </div>
@@ -51,11 +58,11 @@ function Navbar() {
             {navItems.map((item) => (
               <a
                 className="focus-ring rounded-md px-2 py-3 text-sm font-semibold text-slate-200"
-                href={`#${item.toLowerCase()}`}
-                key={item}
+                href={`#${item.id}`}
+                key={item.id}
                 onClick={closeMenu}
               >
-                {item}
+                {item.label}
               </a>
             ))}
             <a

@@ -23,20 +23,23 @@ function About() {
     <section className="section-padding bg-slate-950" id="about">
       <div className="section-shell">
         <p className="eyebrow">About</p>
-        <h2 className="section-title">Useful software, clear business logic, reliable delivery.</h2>
+        <h2 className="section-title">A Full-Stack Developer who owns the complete feature.</h2>
         <div className="mt-8 grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="section-lead mt-0">
             <p>
-              I&apos;m a software developer focused on building useful and reliable digital
-              systems.
+              I&apos;m a Full-Stack Developer with hands-on experience delivering web and
+              mobile products from requirements and database design through APIs,
+              frontend integration, testing, and deployment.
             </p>
             <p className="mt-5">
-              My work includes mobile apps, web dashboards, backend APIs, database
-              design, authentication systems, and deployment-ready projects.
+              Since 2023, I&apos;ve built reservation platforms, clinic operations systems,
+              e-commerce workflows, dashboards, authentication systems, and event
+              registration platforms using Laravel, Node.js, React, Flutter, and SQL.
             </p>
             <p className="mt-5">
-              I care about clean code, clear business logic, database consistency, and
-              simple user experiences.
+              I focus on clean boundaries, database consistency, secure role-based
+              access, useful logs, failure handling, and interfaces that stay simple for
+              real users.
             </p>
           </div>
 

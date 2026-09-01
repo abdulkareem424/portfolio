@@ -4,7 +4,7 @@ import { FiGithub, FiLinkedin, FiMail, FiMessageCircle } from 'react-icons/fi'
 const email = 'alhallakabdulkareem@gmail.com'
 const whatsapp = '963983233965'
 const whatsappText =
-  'Hello Abdulkareem, I saw your portfolio and I want to discuss a project.'
+  'Hello Abdulkareem, I reviewed your portfolio and would like to discuss a Full-Stack Developer opportunity.'
 const contactApiUrl = import.meta.env.VITE_CONTACT_API_URL || '/api/contact'
 
 const contactLinks = [
@@ -83,10 +83,10 @@ function Contact() {
         <div className="grid gap-9 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
             <p className="eyebrow">Contact</p>
-            <h2 className="section-title">Let&apos;s build something useful.</h2>
+            <h2 className="section-title">Looking for a Full-Stack Developer?</h2>
             <p className="section-lead">
-              Have a project, job opportunity, or collaboration in mind? Send me a
-              message and let&apos;s discuss how I can help.
+              I&apos;m open to Full-Stack Developer opportunities involving React, Laravel,
+              Node.js, REST APIs, relational databases, and production delivery.
             </p>
 
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
@@ -107,10 +107,10 @@ function Contact() {
           {isStaticPages ? (
             <div className="surface-card grid content-center gap-5 rounded-lg p-6">
               <div>
-                <h3 className="text-2xl font-black text-white">Start the conversation directly.</h3>
+                <h3 className="text-2xl font-black text-white">Discuss a role directly.</h3>
                 <p className="mt-3 leading-7 text-slate-400">
-                  The public GitHub Pages version is static, so the fastest way to reach me
-                  is email or WhatsApp.
+                  Share the role, product, and stack by email or WhatsApp. I&apos;ll respond
+                  with the most relevant experience and project examples.
                 </p>
               </div>
               <div className="grid gap-3 sm:grid-cols-2">

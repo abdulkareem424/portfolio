@@ -6,10 +6,10 @@ function Projects() {
     <section className="section-padding bg-slate-950" id="projects">
       <div className="section-shell">
         <p className="eyebrow">Projects</p>
-        <h2 className="section-title">Projects Built Around Real Problems</h2>
+        <h2 className="section-title">Full-stack systems with real business workflows.</h2>
         <p className="section-lead">
-          The strongest work is shown first, with academic and training projects separated
-          clearly from business systems.
+          Each featured project demonstrates ownership across UI, API design, database
+          logic, authentication, integrations, or deployment—not isolated code samples.
         </p>
 
         <div className="mt-9 grid gap-5 lg:grid-cols-2">

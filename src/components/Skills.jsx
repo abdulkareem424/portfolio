@@ -5,10 +5,10 @@ function Skills() {
     <section className="section-padding border-y border-slate-800 bg-slate-900/35" id="skills">
       <div className="section-shell">
         <p className="eyebrow">Skills</p>
-        <h2 className="section-title">A stack for complete business systems.</h2>
+        <h2 className="section-title">Full-stack skills organized by delivery layer.</h2>
         <p className="section-lead">
-          Frontend, mobile, backend, database, and deployment tools grouped by how they
-          are used in real projects.
+          The technologies I use to move a feature from interface and API contract to
+          consistent data, authentication, and production deployment.
         </p>
 
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
