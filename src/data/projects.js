@@ -119,6 +119,31 @@ export const featuredProjects = [
     github: '',
     demo: '',
   },
+  {
+    title: 'Alhallak Store Prices | أسعار محل الحلاق',
+    type: 'Wholesale Price Management Platform',
+    description:
+      'A mobile-first Arabic price board for publishing wholesale product prices in USD and SYP, with exchange-rate updates and a protected management page.',
+    problem:
+      'Customers need a fast, reliable way to check current wholesale prices, while the store needs to update products and currency conversions without rebuilding the website.',
+    solution:
+      'Built a responsive RTL price board with product search, USD-to-SYP conversion, exchange-rate update tracking, and an admin workflow for maintaining the published catalog.',
+    tech: ['React', 'Vite', 'JavaScript', 'GitHub Pages', 'Responsive RTL UI'],
+    features: [
+      'Arabic mobile-first interface',
+      'Wholesale product catalog',
+      'USD and SYP prices',
+      'Exchange-rate updates',
+      'Last update timestamp',
+      'Product search',
+      'Protected admin access',
+      'Persistent price management',
+    ],
+    status: 'Live / Production',
+    tone: 'amber',
+    github: 'https://github.com/abdulkareem424/alhallak-prices-live',
+    demo: 'https://abdulkareem424.github.io/alhallak-prices-live/',
+  },
 ]
 
 export const academicProjects = [
