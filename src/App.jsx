@@ -5,10 +5,17 @@ import Hero from './components/Hero'
 import Journey from './components/Journey'
 import Navbar from './components/Navbar'
 import Projects from './components/Projects'
+import ProjectDemo from './components/ProjectDemo'
 import Services from './components/Services'
 import Skills from './components/Skills'
 
 function App() {
+  const projectSlug = new URLSearchParams(window.location.search).get('project')
+
+  if (projectSlug) {
+    return <ProjectDemo slug={projectSlug} />
+  }
+
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
       <Navbar />
