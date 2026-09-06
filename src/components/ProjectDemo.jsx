@@ -6,6 +6,7 @@ const projects = [...featuredProjects, ...academicProjects]
 const themes = {
   amber: { accent: '#f59e0b', soft: 'rgba(245,158,11,.16)' },
   emerald: { accent: '#10b981', soft: 'rgba(16,185,129,.16)' },
+  indigo: { accent: '#818cf8', soft: 'rgba(129,140,248,.16)' },
   orange: { accent: '#f97316', soft: 'rgba(249,115,22,.16)' },
   rose: { accent: '#f43f5e', soft: 'rgba(244,63,94,.16)' },
   sky: { accent: '#38bdf8', soft: 'rgba(56,189,248,.16)' },
@@ -81,12 +82,49 @@ function DataPreview() {
   return <div className="overflow-hidden rounded-2xl bg-white text-slate-900 shadow-2xl"><div className="border-b px-5 py-3 text-sm"><b>Data Mining Notebook</b> <span className="ml-3 text-slate-400">Python 3</span></div><div className="grid gap-5 p-5 md:grid-cols-2"><div><code className="text-xs text-orange-700">model = KMeans(n_clusters=4)</code><div className="mt-5 flex h-56 items-end gap-2 border-b border-l p-3">{[45,72,34,88,59,95,64,79].map((h,i)=><i className="flex-1 rounded-t bg-orange-400" key={i} style={{height:`${h}%`}} />)}</div></div><div className="relative min-h-64 rounded-xl bg-slate-50">{Array.from({length:26},(_,i)=><i className={`absolute h-3 w-3 rounded-full ${['bg-orange-500','bg-sky-500','bg-violet-500','bg-emerald-500'][i%4]}`} key={i} style={{left:`${10+(i*29)%80}%`,top:`${10+(i*41)%78}%`}} />)}<span className="absolute bottom-3 left-4 text-xs text-slate-400">Customer clusters</span></div></div></div>
 }
 
+function GenevaPreview() {
+  const logo = `${import.meta.env.BASE_URL}images/geneva-university.png`
+
+  return (
+    <div className="overflow-hidden rounded-2xl border border-indigo-300/20 bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-900 shadow-2xl">
+      <div className="flex items-center gap-2 border-b border-white/10 px-5 py-3 text-xs text-slate-400">
+        <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
+        <span className="h-2.5 w-2.5 rounded-full bg-amber-300" />
+        <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
+        <span className="ml-2">University portal</span>
+      </div>
+      <div className="grid min-h-96 items-center gap-7 p-7 sm:grid-cols-[160px_1fr]">
+        <img
+          alt="Geneva International University logo"
+          className="mx-auto w-40 rounded-2xl bg-white p-4 shadow-xl"
+          src={logo}
+        />
+        <div>
+          <p className="text-xs font-black uppercase tracking-[.22em] text-indigo-300">
+            Front-end project
+          </p>
+          <h3 className="mt-3 text-3xl font-black text-white">Learn from anywhere</h3>
+          <p className="mt-3 leading-7 text-indigo-100/80">
+            Courses, admissions, faculty, university news, and account flows in one responsive multi-page experience.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-2 text-xs font-bold text-indigo-100">
+            {['Courses', 'Admissions', 'News', 'Admin prototype'].map((label) => (
+              <span className="rounded-full border border-indigo-300/20 bg-indigo-300/10 px-3 py-2" key={label}>{label}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 function ProjectVisual({ slug }) {
   if (slug === 'tabeley') return <TabeleyPreview />
   if (slug === 'physio-center') return <ClinicPreview />
   if (slug === 'alc-orientation') return <AlcPreview />
   if (slug === 'acadia-store') return <StorePreview />
   if (slug === 'alhallak-prices') return <PricesPreview />
+  if (slug === 'geneva-university') return <GenevaPreview />
   if (slug === 'image-editor') return <ImageEditorPreview />
   if (slug === 'physio-api') return <ApiPreview />
   if (slug === 'http-server') return <ApiPreview server />
@@ -115,7 +153,7 @@ function ProjectDemo({ slug }) {
               <h1 className="mt-4 text-4xl font-black leading-tight text-white sm:text-6xl">{project.title}</h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">{project.description}</p>
               <div className="mt-8 flex flex-wrap gap-3">
-                {project.externalDemo && <a className="focus-ring inline-flex items-center gap-2 rounded-lg px-5 py-3 text-sm font-black text-slate-950" href={project.externalDemo} rel="noreferrer" style={{ background: theme.accent }} target="_blank"><FiExternalLink /> Open actual website</a>}
+                {project.externalDemo && <a className="focus-ring inline-flex items-center gap-2 rounded-lg px-5 py-3 text-sm font-black text-slate-950" href={project.externalDemo} rel="noreferrer" style={{ background: theme.accent }} target="_blank"><FiExternalLink /> Live Demo</a>}
                 {project.github && <a className="focus-ring inline-flex items-center gap-2 rounded-lg border border-slate-700 px-5 py-3 text-sm font-bold hover:border-slate-500" href={project.github} rel="noreferrer" target="_blank"><FiGithub /> GitHub</a>}
               </div>
             </div>

@@ -155,6 +155,41 @@ export const featuredProjects = [
 
 export const academicProjects = [
   {
+    title: 'Geneva International University',
+    slug: 'geneva-university',
+    type: 'University Portal / E-learning Front-end',
+    description:
+      'A responsive multi-page university portal featuring course discovery, admissions content, account flows, an administration prototype, university news, and interactive front-end experiences.',
+    problem:
+      'Prospective students need one responsive front-end experience for discovering university information, courses, admissions guidance, faculty, news, and account entry points.',
+    solution:
+      'Built a static multi-page portal with reusable styling, responsive navigation, course filtering, admissions and account prototypes, faculty and news interactions, and GitHub Pages deployment.',
+    tech: [
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'Tailwind CSS',
+      'GSAP',
+      'Responsive Design',
+    ],
+    features: [
+      'University landing page',
+      'Interactive courses catalog',
+      'Admissions pages',
+      'Login and recovery flows',
+      'Admin interface prototype',
+      'University news',
+      'Responsive navigation',
+      'Interactive UI animations',
+    ],
+    status: 'Academic / Front-end Project',
+    tone: 'indigo',
+    image: '/images/geneva-university.png',
+    github: 'https://github.com/abdulkareem424/geneeua-university',
+    demo: '?project=geneva-university',
+    externalDemo: 'https://abdulkareem424.github.io/geneeua-university/',
+  },
+  {
     title: 'Image Editor Desktop App',
     slug: 'image-editor',
     type: 'Academic Project',

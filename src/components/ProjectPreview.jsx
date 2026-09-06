@@ -1,6 +1,7 @@
 const toneClasses = {
   amber: 'from-amber-500/25 to-orange-500/10 text-amber-200',
   emerald: 'from-emerald-500/25 to-teal-500/10 text-emerald-200',
+  indigo: 'from-indigo-500/25 to-blue-500/10 text-indigo-200',
   orange: 'from-orange-500/30 to-red-500/10 text-orange-200',
   rose: 'from-rose-500/25 to-pink-500/10 text-rose-200',
   sky: 'from-sky-500/25 to-cyan-500/10 text-sky-200',
