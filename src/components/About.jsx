@@ -23,7 +23,7 @@ function About() {
     <section className="section-padding bg-slate-950" id="about">
       <div className="section-shell">
         <p className="eyebrow">About</p>
-        <h2 className="section-title">A Full-Stack Developer who owns the complete feature.</h2>
+        <h2 className="section-title">A Full-Stack Developer and Software Engineer who owns the complete feature.</h2>
         <div className="mt-8 grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="section-lead mt-0">
             <p>
