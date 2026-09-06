@@ -1,22 +1,26 @@
 export const skills = [
   {
     category: 'Frontend',
-    items: ['React.js', 'Next.js', 'JavaScript ES6+', 'HTML5 / CSS3', 'Tailwind CSS', 'Responsive UI'],
+    items: ['React.js', 'JavaScript ES6+', 'HTML5 / CSS3', 'Tailwind CSS', 'Responsive UI', 'RTL UI'],
   },
   {
-    category: 'Backend & APIs',
-    items: ['PHP / Laravel 12', 'Node.js', 'Express.js', 'REST API Design', 'Validation', 'Business Logic'],
+    category: 'Backend',
+    items: ['PHP / Laravel', 'Node.js', 'Express.js', 'REST API Design', 'Authentication', 'Role-Based Access'],
   },
   {
-    category: 'Data & Security',
-    items: ['PostgreSQL', 'MySQL', 'SQLite', 'Relational Modeling', 'Migrations', 'JWT / Passport / Sanctum'],
+    category: 'Mobile',
+    items: ['Flutter', 'Dart', 'Riverpod', 'Responsive Layouts', 'API Integration', 'Local Persistence'],
   },
   {
-    category: 'Integration & Real-Time',
-    items: ['API Integration', 'Pusher', 'Firebase Notifications', 'Telegram Bot API', 'Role-Based Access', 'Postman'],
+    category: 'Database',
+    items: ['PostgreSQL', 'MySQL', 'SQLite', 'SQL', 'Relational Modeling', 'Migrations'],
   },
   {
-    category: 'Delivery & Mobile',
-    items: ['Docker', 'Linux', 'Nginx', 'Git / GitHub', 'Flutter / Dart', 'DNS / Cloudflare'],
+    category: 'DevOps',
+    items: ['Docker', 'Linux', 'Nginx', 'GitHub Actions', 'GitHub Pages', 'DNS / Cloudflare'],
+  },
+  {
+    category: 'Tools',
+    items: ['Git / GitHub', 'Vite', 'npm', 'Composer', 'Postman', 'Telegram Bot API'],
   },
 ]
