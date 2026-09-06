@@ -8,10 +8,15 @@ function ProjectCard({ project, compact = false }) {
       icon: FiGithub,
       label: 'GitHub',
     },
-    project.demo && {
-      href: project.demo,
+    (project.externalDemo || project.demo) && {
+      href: project.externalDemo || project.demo,
       icon: FiExternalLink,
       label: 'Live Demo',
+    },
+    project.externalDemo && project.demo && {
+      href: project.demo,
+      icon: FiExternalLink,
+      label: 'Project Details',
     },
   ].filter(Boolean)
 
