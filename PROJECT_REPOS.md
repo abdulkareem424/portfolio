@@ -1,69 +1,61 @@
-# Project Repository Plan
+# Portfolio Repository Audit
 
-Use these repository names and descriptions when creating the missing GitHub repositories.
+Last audited: 2026-09-06
 
-## Existing Repositories
+This catalog records which portfolio claims can be verified from Abdulkareem's GitHub account, which deployments were checked, and which local projects still need repositories.
 
-### tabeley-mvp
+## Verified Portfolio Repositories
 
-URL: <https://github.com/abdulkareem424/tabeley-mvp>
+| Portfolio project | Matching repository | Visibility | Verification result |
+| --- | --- | --- | --- |
+| Portfolio | <https://github.com/abdulkareem424/portfolio> | Public | React/Vite/Tailwind portfolio with Express contact API and Docker support |
+| Tabeley | <https://github.com/abdulkareem424/tabeley-mvp> | Private | Flutter/Riverpod client, Laravel 12/Sanctum API, PostgreSQL, Docker, and reservation workflows verified from source |
+| ALC Orientation Registration | <https://github.com/abdulkareem424/alc-orientation-registration> | Private | Node.js registration, PostgreSQL plus JSON fallback, Telegram, QR, PDF, admin, and attendance workflows verified from source |
+| Physio Center Management | <https://github.com/abdulkareem424/clinic> | Private | Flutter desktop UI and Laravel 13 development API foundation verified; persistence and deployment remain planned work |
+| Alhallak Store Prices | <https://github.com/abdulkareem424/alhallak-prices-live> | Public | Static HTML/CSS/JS price board with owner-only edit and exchange-rate GitHub Actions verified |
+| Geneva International University | <https://github.com/abdulkareem424/geneeua-university> | Public | Responsive multi-page HTML/CSS/JS university portal verified |
+| WISC Assessment Workflow | <https://github.com/abdulkareem424/wisc4test> | Public | Flutter prototype with participant, subtest, timer, answer, JSON asset, and SQLite session workflows verified |
 
-Description:
-Restaurant and cafe reservation platform with Flutter mobile app, Laravel API, PostgreSQL database, vendor/admin workflows, table assignment, OTP login, and reservation lifecycle management.
+Private repository links work only for collaborators who have access. The portfolio labels them as private instead of presenting them as publicly reviewable source.
 
-### clinic
+## Verified Live Deployments
 
-URL: <https://github.com/abdulkareem424/clinic>
+| Project | URL | Result |
+| --- | --- | --- |
+| Tabeley landing page | <https://tabeley.com/> | Working and matches the repository landing-page source; the separate API returned HTTP 503 during this audit |
+| Alhallak Store Prices | <https://abdulkareem424.github.io/alhallak-prices-live/> | Working and matches the repository |
+| Geneva International University | <https://abdulkareem424.github.io/geneeua-university/> | Working and matches the repository |
 
-Description:
-Offline clinic management system with Flutter desktop client, Laravel REST API, PostgreSQL database, appointments, queue, visits, billing, reports, backup strategy, and Windows deployment planning.
+`https://alc-architecture.com/` is a working ALC-branded website, but it does not currently expose the orientation registration application found in the repository. It is therefore not labeled as that project's live demo.
 
-## Repositories To Create
+## Verified Build Limitation
 
-### portfolio
+The Tabeley Flutter client currently fails a web build because `app_router.dart` imports `vendor_reservations_screen.dart` and `vendor_profile_screen.dart`, but those files are absent from the repository. The Laravel vendor reservation endpoints are present; the portfolio does not claim the Flutter client is currently buildable.
 
-Description:
-Full-stack and mobile developer portfolio built with React, Vite, Tailwind CSS, Express, Nodemailer, and Docker, with a working contact form API.
+## Repository Gaps
 
-Live demo target:
-Deploy the Docker container to Render, Railway, Fly.io, or a VPS. GitHub Pages is not enough for the contact form API.
+No matching repository was found for these portfolio entries after reviewing repository names, descriptions, languages, file trees, and account-wide code search results:
 
-### acadia-store
+- Acadia E-commerce Website
+- Image Editor Desktop App
+- Physio Center Node API
+- Simple HTTP Web Server
+- Data Mining Notebook
 
-Description:
-Full-stack e-commerce store with React frontend, Express API, Prisma models, product uploads, JWT authentication, category management, cart workflow, and admin-ready backend services.
+These entries remain in the portfolio with `Repository Pending` labels and internal project details only. Publish each source tree only after checking it for credentials, personal data, generated dependencies, and large binary files.
 
-Suggested source path:
-`F:\acadia store`
+## Reviewed But Not Added
 
-### physio-center-api
+- `alhallak-prices`: older/duplicate price-board repository; the live repository is already featured.
+- `registration_page`: small standalone front-end form with limited portfolio value.
+- `flutter`: small Flutter/BLoC exercise rather than a complete product.
+- `mostaejl`: forked repository, so it is not presented as original portfolio work.
+- `WP2_PROJECT_AIU`: README-only repository without enough implementation evidence.
 
-Description:
-Node.js backend prototype for a physiotherapy center using Express, Sequelize, SQL Server, JWT authentication, password hashing, CORS, and environment-based configuration.
+## Recommended Evidence Improvements
 
-Suggested source path:
-`F:\New folder\physio-center`
-
-### image-editor-desktop
-
-Description:
-C# WinForms desktop image editor with grayscale, crop, rotate, flip, color channel operations, shapes, text tools, filters, and undo/redo workflows.
-
-Suggested source path:
-`F:\4 2\mmn`
-
-### python-http-server
-
-Description:
-Simple Python socket-based HTTP server that handles GET and POST requests, serves static files, and processes multipart/form-data file uploads.
-
-Suggested source path:
-`F:\tcp`
-
-### data-mining-notebooks
-
-Description:
-Academic data mining notebooks applying classification, regression, clustering, and preprocessing workflows with Python, Pandas, Scikit-learn, KNN, Decision Tree, Linear Regression, and KMeans.
-
-Suggested source path:
-`F:\4 2`
+1. Add concise READMEs, setup instructions, test commands, architecture notes, and real screenshots to the strongest repositories.
+2. Review private repositories for secrets and personal data before considering public visibility.
+3. Remove development fallback credentials from the ALC app before any public release.
+4. Finish database persistence in the clinic API before describing it as a complete management system.
+5. Publish the five local-source projects in focused repositories only when their code and documentation are ready for employer review.

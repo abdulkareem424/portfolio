@@ -34,7 +34,11 @@ function ProjectPreview({ project }) {
               <img
                 alt={`${project.title} visual asset`}
                 className="h-14 w-14 rounded-md border border-white/15 bg-white object-contain p-2"
+                decoding="async"
+                height="56"
+                loading="lazy"
                 src={imageSrc}
+                width="56"
               />
             )}
             <h3 className="text-xl font-black leading-tight text-white">{project.title}</h3>

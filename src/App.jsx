@@ -2,6 +2,7 @@ import About from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Hero from './components/Hero'
+import HireValue from './components/HireValue'
 import Journey from './components/Journey'
 import Navbar from './components/Navbar'
 import Projects from './components/Projects'
@@ -22,6 +23,7 @@ function App() {
       <main>
         <Hero />
         <About />
+        <HireValue />
         <Skills />
         <Projects />
         <Services />

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { FiGithub, FiLinkedin, FiMail, FiMessageCircle } from 'react-icons/fi'
+import { FiDownload, FiGithub, FiLinkedin, FiMail, FiMessageCircle } from 'react-icons/fi'
 
 const email = 'alhallakabdulkareem@gmail.com'
 const whatsapp = '963983233965'
@@ -9,24 +9,35 @@ const contactApiUrl = import.meta.env.VITE_CONTACT_API_URL || '/api/contact'
 
 const contactLinks = [
   {
-    label: 'Email',
+    label: 'Email me',
+    detail: email,
     href: `mailto:${email}`,
     icon: FiMail,
   },
   {
     label: 'WhatsApp',
+    detail: 'Direct message',
     href: `https://wa.me/${whatsapp}?text=${encodeURIComponent(whatsappText)}`,
     icon: FiMessageCircle,
   },
   {
     label: 'LinkedIn',
+    detail: 'Professional profile',
     href: 'https://www.linkedin.com/in/abdulkareem-alhallak-46a09b298/',
     icon: FiLinkedin,
   },
   {
     label: 'GitHub',
+    detail: 'Source repositories',
     href: 'https://github.com/abdulkareem424',
     icon: FiGithub,
+  },
+  {
+    label: 'Download CV',
+    detail: 'PDF résumé',
+    href: './abdulkareemalhallak-cv.pdf',
+    icon: FiDownload,
+    download: true,
   },
 ]
 
@@ -83,22 +94,24 @@ function Contact() {
         <div className="grid gap-9 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
             <p className="eyebrow">Contact</p>
-            <h2 className="section-title">Looking for a Full-Stack Developer?</h2>
+            <h2 className="section-title">Looking for a Full-Stack Developer or Software Engineer?</h2>
             <p className="section-lead">
               I&apos;m open to Full-Stack Developer opportunities involving React, Laravel,
               Node.js, REST APIs, relational databases, and production delivery.
             </p>
 
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
-              {contactLinks.map(({ label, href, icon: Icon }) => (
+              {contactLinks.map(({ label, detail, download, href, icon: Icon }) => (
                 <a
                   className="focus-ring surface-card flex items-center gap-3 rounded-lg px-4 py-4 font-bold text-slate-100 transition hover:border-orange-500"
+                  download={download || undefined}
                   href={href}
                   key={label}
-                  rel="noreferrer"
+                  rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   target={href.startsWith('http') ? '_blank' : undefined}
                 >
-                  <Icon className="text-orange-400" /> {label}
+                  <Icon aria-hidden="true" className="shrink-0 text-orange-400" />
+                  <span><span className="block">{label}</span><span className="mt-1 block break-all text-xs font-medium text-slate-500">{detail}</span></span>
                 </a>
               ))}
             </div>

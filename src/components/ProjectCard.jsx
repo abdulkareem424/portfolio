@@ -1,35 +1,37 @@
 import { FiExternalLink, FiGithub } from 'react-icons/fi'
 import ProjectPreview from './ProjectPreview'
+import ProjectStatus from './ProjectStatus'
 
 function ProjectCard({ project, compact = false }) {
   const actions = [
     project.github && {
       href: project.github,
       icon: FiGithub,
-      label: 'GitHub',
+      label: project.githubVisibility === 'private' ? 'Private GitHub' : 'GitHub',
+      external: true,
     },
-    (project.externalDemo || project.demo) && {
-      href: project.externalDemo || project.demo,
+    project.externalDemo && {
+      href: project.externalDemo,
       icon: FiExternalLink,
-      label: 'Live Demo',
+      label: project.externalDemoLabel || 'Live Demo',
+      external: true,
     },
-    project.externalDemo && project.demo && {
+    project.demo && {
       href: project.demo,
       icon: FiExternalLink,
       label: 'Project Details',
+      external: false,
     },
   ].filter(Boolean)
 
   return (
-    <article className="surface-card grid overflow-hidden rounded-lg">
+    <article aria-labelledby={`${project.slug}-title`} className="surface-card grid overflow-hidden rounded-lg">
       <ProjectPreview project={project} />
       <div className="grid gap-5 p-5">
         <div>
           <div className="flex flex-wrap items-center gap-3">
-            <h3 className="text-xl font-black leading-tight text-white">{project.title}</h3>
-            <span className="rounded-md border border-orange-500/30 bg-orange-500/10 px-3 py-1 text-xs font-bold text-orange-200">
-              {project.status}
-            </span>
+            <h3 className="text-xl font-black leading-tight text-white" id={`${project.slug}-title`}>{project.title}</h3>
+            <ProjectStatus statuses={project.statuses} />
           </div>
           <p className="mt-3 leading-7 text-slate-400">{project.description}</p>
         </div>
@@ -72,13 +74,14 @@ function ProjectCard({ project, compact = false }) {
 
         {actions.length > 0 && (
           <div className="flex flex-wrap gap-3 pt-1">
-            {actions.map(({ href, icon: Icon, label }) => (
+            {actions.map(({ href, icon: Icon, label, external }) => (
               <a
                 className="focus-ring inline-flex items-center gap-2 rounded-md border border-slate-700 px-4 py-2 text-sm font-bold text-slate-100 transition hover:border-orange-500"
+                aria-label={`${label} for ${project.title}${external ? ' (opens in new tab)' : ''}`}
                 href={href}
-                key={label}
-                rel="noreferrer"
-                target="_blank"
+                key={`${label}-${href}`}
+                rel={external ? 'noopener noreferrer' : undefined}
+                target={external ? '_blank' : undefined}
               >
                 <Icon /> {label}
               </a>
