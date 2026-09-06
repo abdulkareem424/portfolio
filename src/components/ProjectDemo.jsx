@@ -118,6 +118,34 @@ function GenevaPreview() {
   )
 }
 
+function WiscPreview() {
+  return (
+    <div className="overflow-hidden rounded-2xl border border-emerald-300/20 bg-slate-900 p-6 shadow-2xl">
+      <p className="text-xs font-black uppercase tracking-[.22em] text-emerald-300">
+        Assessment workflow
+      </p>
+      <div className="mt-6 grid gap-3 sm:grid-cols-2">
+        {[
+          ['1', 'Select participant'],
+          ['2', 'Run a timed subtest'],
+          ['3', 'Capture answers'],
+          ['4', 'Store the session'],
+        ].map(([number, label]) => (
+          <div className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[.03] p-4" key={number}>
+            <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-emerald-400/15 font-black text-emerald-300">
+              {number}
+            </span>
+            <b className="text-sm text-slate-200">{label}</b>
+          </div>
+        ))}
+      </div>
+      <div className="mt-5 rounded-xl border border-emerald-300/15 bg-emerald-400/[.06] p-4 text-sm text-emerald-100">
+        Flutter interface · JSON question assets · SQLite session records
+      </div>
+    </div>
+  )
+}
+
 function ProjectVisual({ slug }) {
   if (slug === 'tabeley') return <TabeleyPreview />
   if (slug === 'physio-center') return <ClinicPreview />
@@ -125,6 +153,7 @@ function ProjectVisual({ slug }) {
   if (slug === 'acadia-store') return <StorePreview />
   if (slug === 'alhallak-prices') return <PricesPreview />
   if (slug === 'geneva-university') return <GenevaPreview />
+  if (slug === 'wisc-assessment') return <WiscPreview />
   if (slug === 'image-editor') return <ImageEditorPreview />
   if (slug === 'physio-api') return <ApiPreview />
   if (slug === 'http-server') return <ApiPreview server />
@@ -141,7 +170,7 @@ function ProjectDemo({ slug }) {
       <header className="border-b border-white/10 bg-slate-950/90 backdrop-blur">
         <div className="section-shell flex min-h-18 items-center justify-between gap-4 py-4">
           <a className="focus-ring inline-flex items-center gap-2 text-sm font-bold text-slate-300 hover:text-white" href="./#projects"><FiArrowLeft /> Portfolio</a>
-          <span className="rounded-full border border-white/10 px-3 py-1 text-xs font-bold text-slate-400">Interactive project showcase</span>
+          <span className="rounded-full border border-white/10 px-3 py-1 text-xs font-bold text-slate-400">Project case study</span>
         </div>
       </header>
 
@@ -154,10 +183,15 @@ function ProjectDemo({ slug }) {
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">{project.description}</p>
               <div className="mt-8 flex flex-wrap gap-3">
                 {project.externalDemo && <a className="focus-ring inline-flex items-center gap-2 rounded-lg px-5 py-3 text-sm font-black text-slate-950" href={project.externalDemo} rel="noreferrer" style={{ background: theme.accent }} target="_blank"><FiExternalLink /> Live Demo</a>}
-                {project.github && <a className="focus-ring inline-flex items-center gap-2 rounded-lg border border-slate-700 px-5 py-3 text-sm font-bold hover:border-slate-500" href={project.github} rel="noreferrer" target="_blank"><FiGithub /> GitHub</a>}
+                {project.github && <a className="focus-ring inline-flex items-center gap-2 rounded-lg border border-slate-700 px-5 py-3 text-sm font-bold hover:border-slate-500" href={project.github} rel="noreferrer" target="_blank"><FiGithub /> {project.githubVisibility === 'private' ? 'Private GitHub' : 'GitHub'}</a>}
               </div>
             </div>
-            <ProjectVisual slug={slug} />
+            <div>
+              <ProjectVisual slug={slug} />
+              <p className="mt-3 text-center text-xs text-slate-500">
+                Project overview illustration — not presented as a product screenshot.
+              </p>
+            </div>
           </div>
         </section>
 

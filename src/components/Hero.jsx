@@ -1,6 +1,6 @@
 import { FiArrowRight, FiDownload, FiMail } from 'react-icons/fi'
 
-const stack = ['React / Next.js', 'Laravel / PHP', 'Node.js / Express', 'PostgreSQL / MySQL', 'REST APIs / Auth', 'Docker / Linux']
+const stack = ['React / JavaScript', 'Laravel / PHP', 'Node.js / Express', 'PostgreSQL / MySQL', 'REST APIs / Auth', 'Docker / Linux']
 
 function Hero() {
   return (
@@ -8,7 +8,7 @@ function Hero() {
       <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(15,23,42,0),rgba(15,23,42,0.9)),linear-gradient(180deg,rgba(249,115,22,0.08),rgba(15,23,42,0)_46%)]" />
       <div className="section-shell relative grid min-h-[calc(84svh-64px)] items-center gap-10 py-14 lg:grid-cols-[1.18fr_0.82fr]">
         <div>
-          <p className="eyebrow">Full-Stack Developer</p>
+          <p className="eyebrow">Full-Stack Developer · Software Engineer</p>
           <h1 className="mt-5 max-w-4xl text-4xl font-black leading-[1.04] tracking-normal text-white sm:text-5xl lg:text-6xl">
             I build complete web products—from database to deployment.
           </h1>
@@ -67,7 +67,7 @@ function Hero() {
             <div className="mt-6 rounded-md border border-orange-500/25 bg-orange-500/10 p-4">
               <p className="text-sm font-semibold leading-7 text-orange-100">
                 API-first systems with authentication, role-based access, reliable
-                data models, real-time features, and production deployment.
+                data models, tested workflows, and deployment-ready foundations.
               </p>
             </div>
           </div>

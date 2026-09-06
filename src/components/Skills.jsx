@@ -11,7 +11,7 @@ function Skills() {
           consistent data, authentication, and production deployment.
         </p>
 
-        <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
+        <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {skills.map((group) => (
             <article className="surface-card rounded-lg p-5" key={group.category}>
               <h3 className="text-lg font-extrabold text-white">{group.category}</h3>

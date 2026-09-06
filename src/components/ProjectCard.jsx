@@ -6,17 +6,20 @@ function ProjectCard({ project, compact = false }) {
     project.github && {
       href: project.github,
       icon: FiGithub,
-      label: 'GitHub',
+      label: project.githubVisibility === 'private' ? 'Private GitHub' : 'GitHub',
+      external: true,
     },
-    (project.externalDemo || project.demo) && {
-      href: project.externalDemo || project.demo,
+    project.externalDemo && {
+      href: project.externalDemo,
       icon: FiExternalLink,
       label: 'Live Demo',
+      external: true,
     },
-    project.externalDemo && project.demo && {
+    project.demo && {
       href: project.demo,
       icon: FiExternalLink,
       label: 'Project Details',
+      external: false,
     },
   ].filter(Boolean)
 
@@ -72,13 +75,13 @@ function ProjectCard({ project, compact = false }) {
 
         {actions.length > 0 && (
           <div className="flex flex-wrap gap-3 pt-1">
-            {actions.map(({ href, icon: Icon, label }) => (
+            {actions.map(({ href, icon: Icon, label, external }) => (
               <a
                 className="focus-ring inline-flex items-center gap-2 rounded-md border border-slate-700 px-4 py-2 text-sm font-bold text-slate-100 transition hover:border-orange-500"
                 href={href}
-                key={label}
-                rel="noreferrer"
-                target="_blank"
+                key={`${label}-${href}`}
+                rel={external ? 'noreferrer' : undefined}
+                target={external ? '_blank' : undefined}
               >
                 <Icon /> {label}
               </a>
