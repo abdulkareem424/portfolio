@@ -22,10 +22,15 @@ Private repository links work only for collaborators who have access. The portfo
 
 | Project | URL | Result |
 | --- | --- | --- |
+| Tabeley landing page | <https://tabeley.com/> | Working and matches the repository landing-page source; the separate API returned HTTP 503 during this audit |
 | Alhallak Store Prices | <https://abdulkareem424.github.io/alhallak-prices-live/> | Working and matches the repository |
 | Geneva International University | <https://abdulkareem424.github.io/geneeua-university/> | Working and matches the repository |
 
 `https://alc-architecture.com/` is a working ALC-branded website, but it does not currently expose the orientation registration application found in the repository. It is therefore not labeled as that project's live demo.
+
+## Verified Build Limitation
+
+The Tabeley Flutter client currently fails a web build because `app_router.dart` imports `vendor_reservations_screen.dart` and `vendor_profile_screen.dart`, but those files are absent from the repository. The Laravel vendor reservation endpoints are present; the portfolio does not claim the Flutter client is currently buildable.
 
 ## Repository Gaps
 

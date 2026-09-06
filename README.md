@@ -5,7 +5,9 @@ Portfolio for Abdulkareem Alhallak, a Full-Stack Developer and Software Engineer
 ## Portfolio Highlights
 
 - Evidence-focused project catalog with honest live, private-source, prototype, and repository-pending labels.
-- Separate actions for source code, verified live demos, and internal project case studies.
+- Detailed case studies with verified architecture, workflows, contributions, engineering decisions, and limitations.
+- Real repository/running-page galleries with an accessible enlarged preview and explicit fallbacks where screenshots are missing.
+- Lightweight project filters and separate actions for source code, verified live pages, and internal case studies.
 - Responsive React 19, Vite, and Tailwind CSS interface.
 - Docker-ready Express server with a Nodemailer contact endpoint.
 - Static GitHub Pages deployment with email and WhatsApp contact fallbacks.
@@ -14,7 +16,7 @@ Portfolio for Abdulkareem Alhallak, a Full-Stack Developer and Software Engineer
 
 | Project | Source | Live demo | Portfolio status |
 | --- | --- | --- | --- |
-| Tabeley | [Private repository](https://github.com/abdulkareem424/tabeley-mvp) | Not published | MVP / active development |
+| Tabeley | [Private repository](https://github.com/abdulkareem424/tabeley-mvp) | [Verified landing page](https://tabeley.com/) | MVP / in development; application API unavailable during audit |
 | ALC Orientation Registration | [Private repository](https://github.com/abdulkareem424/alc-orientation-registration) | Not published | Source-verified MVP |
 | Physio Center Management | [Private repository](https://github.com/abdulkareem424/clinic) | Not published | Prototype / in progress |
 | Alhallak Store Prices | [Public repository](https://github.com/abdulkareem424/alhallak-prices-live) | [Verified deployment](https://abdulkareem424.github.io/alhallak-prices-live/) | Live |
@@ -23,6 +25,8 @@ Portfolio for Abdulkareem Alhallak, a Full-Stack Developer and Software Engineer
 | WISC Assessment Workflow | [Public repository](https://github.com/abdulkareem424/wisc4test) | Not published | Flutter prototype |
 
 The remaining academic and training entries are retained as local-source work and are labeled `Repository Pending` until their source is published. See [PROJECT_REPOS.md](PROJECT_REPOS.md) for the full audit.
+
+The six repository-backed case studies live in `src/data/caseStudies.js`. Their screenshots are captures of actual running pages; projects without screenshots show a clear fallback instead of generated product UI.
 
 ## Tech Stack
 
